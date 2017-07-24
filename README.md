@@ -30,7 +30,7 @@ Interface R and Microsoft R with SAS and WPS
     ```        library(haven);                                                                                   ```
     ```        library(RMySQL);                                                                                  ```
     ```        class<-read_sas("d:/sd1/class.sas7bdat");                                                         ```
-    ```        mydb = dbConnect(MySQL(), user="root", password="sas28rlx", dbname="sakila", port=3306);          ```
+    ```        mydb = dbConnect(MySQL(), user="root", password="xxxxxxx", dbname="sakila", port=3306);          ```
     ```        dbListTables(mydb);                                                                               ```
     ```        dbSendQuery(mydb, "drop table if exists class, iris");                                            ```
     ```        dbWriteTable(mydb, name="class", value=class);                                                    ```
@@ -50,7 +50,7 @@ Interface R and Microsoft R with SAS and WPS
     ```        library(haven);                                                                                   ```
     ```        library(RMySQL);                                                                                  ```
     ```        class<-read_sas("d:/sd1/class.sas7bdat");                                                         ```
-    ```        mydb = dbConnect(MySQL(), user="root", password="sas28rlx", dbname="sakila", port=3306);          ```
+    ```        mydb = dbConnect(MySQL(), user="root", password="xxxxxxx", dbname="sakila", port=3306);          ```
     ```        dbListTables(mydb);                                                                               ```
     ```        dbSendQuery(mydb, "drop table if exists class, iris");                                            ```
     ```        dbWriteTable(mydb, name="class", value=class);                                                    ```
