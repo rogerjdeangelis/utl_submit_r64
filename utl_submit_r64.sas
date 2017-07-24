@@ -1,0 +1,24 @@
+
+%macro utl_submit_R64(pgmx)/des="Semi colon separated set of R commands";
+  * write the program to a temporary file;
+  filename r_pgm "d:/txt/r_pgm.txt" lrecl=32766 recfm=v;
+  data _null_;
+    length pgm $32756;
+    file r_pgm;
+    pgm=&pgmx;
+    put pgm;
+    putlog pgm;
+  run;
+  %let __loc=%sysfunc(pathname(r_pgm));
+  * pipe file through R;
+  filename rut pipe "c:\Progra~1\R\R-3.3.2\bin\x64\R.exe --vanilla --quiet --no-save < &__loc";
+  data _null_;
+    file print;
+    infile rut recfm=v lrecl=32756;
+    input;
+    put _infile_;
+    putlog _infile_;
+  run;
+  filename rut clear;
+  filename r_pgm clear;
+%mend utl_submit_r64;
