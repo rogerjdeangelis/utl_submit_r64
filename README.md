@@ -12,7 +12,7 @@ Interface R and Microsoft R with SAS and WPS
     ```       2. import SAS dataset into R                                                                       ```
     ```       3. drop table if it exists                                                                         ```
     ```       4. create table in mysql database                                                                  ```
-    ```       5. export mysql table back to R                                                                    ```
+    ```       5. export mysql table back to SAS/WPS                                                                    ```
     ```                                                                                                          ```
     ```      Using free WPS Express                                                                              ```
     ```                                                                                                          ```
